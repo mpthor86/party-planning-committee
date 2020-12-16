@@ -6,7 +6,7 @@ class Party < ApplicationRecord
     end
 
     def details
-        "#{self.name} - #{self.date}"
+        "#{self.name} - #{self.date.strftime("%A, %b %d")}"
     end
 
     def self.order_by_date
