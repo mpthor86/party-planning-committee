@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_12_16_205135) do
 
   create_table "parties", force: :cascade do |t|
     t.string "name"
     t.datetime "date"
     t.float "budget"
+
     t.boolean "private"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

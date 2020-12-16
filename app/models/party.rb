@@ -1,5 +1,10 @@
 class Party < ApplicationRecord
 
+
+    def self.most_expensive_party
+        self.where("budget > 101")
+    end
+
     def details
         "#{self.name} - #{self.date}"
     end
@@ -15,5 +20,6 @@ class Party < ApplicationRecord
     def private?
          self.private ? "Private" : "Public"
     end
+
 
 end
